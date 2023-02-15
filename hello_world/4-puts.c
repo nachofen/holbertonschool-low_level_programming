@@ -1,5 +1,11 @@
 #include <stdio.h>
-int main(void)/* The main function serves as the starting point for program execution.*/
+
+/**
+ * main - This is a description
+ *
+ * Return: 0 works
+ */
+int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle"\n);
 return (0);
