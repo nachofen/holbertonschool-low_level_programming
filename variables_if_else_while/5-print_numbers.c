@@ -14,6 +14,6 @@ int main(void)
 		printf("%u", pot);
 		pot++;
 	}
-printf("\n")
+printf("\n");
 return (0);
 }
