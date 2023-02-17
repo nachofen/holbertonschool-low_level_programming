@@ -6,8 +6,6 @@
  */
 int print_sign(int c)
 {
-	int size;
-
 	if (c > 0)
 	{
 		_putchar('+');
