@@ -15,5 +15,6 @@ int main(void)
 		pot++;
 	}
 printf("\n");
+i
 return (0);
 }
