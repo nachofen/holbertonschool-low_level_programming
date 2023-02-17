@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char ch = 'A';
+	char ch = 'a';
 
 	int num = 0;
 
@@ -16,7 +16,7 @@ int main(void)
 		printf("%u", num);
 		num++;
 	}
-	while (ch <= 'F')
+	while (ch <= 'f')
 	{
 		putchar(ch);
 		ch++;
