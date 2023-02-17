@@ -6,19 +6,11 @@
  */
 int _abs(int c)
 {
-	int c2;
-
-	if (c > 0)
+	if (c >= 0)
 	{
-		_putchar(c);
-	}
-	else if (c < 0)
-	{
-		c2 = c * -1;
-		_putchar(c2);
+		return (c);
 	}
 	else
-	{
-		_putchar('0');
-	}
+		return (c * -1);
+	return (0);
 }
