@@ -15,7 +15,7 @@ void times_table(void)
 		for (col1 = 1; col1 <= 9; col1++)
 		{
 			r = (row1 * col1);
-			if (r >= 0)
+			if (r > 0)
 			{
 				_putchar((r / 10) + 48);
 			}
