@@ -7,7 +7,7 @@ CFLAGS = -pedantic
 
 
 all: $(OBJ)
-        $(CC) $(OBJ) -o $(NAME)
+        $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
         $(RM) *~ $(NAME)
