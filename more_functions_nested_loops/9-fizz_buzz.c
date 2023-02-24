@@ -2,7 +2,7 @@
 /**
  * main - FIZZBUZZ
  */
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -17,4 +17,5 @@ void main(void)
 		else
 			printf("%i", i);
 	}
+	return(0);
 }
