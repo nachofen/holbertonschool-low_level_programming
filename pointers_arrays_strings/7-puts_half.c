@@ -17,7 +17,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		med = ((i - 1) / 2);
+		med = ((i + 1) / 2);
 	}
 	for (; med < i; med++)
 	{
