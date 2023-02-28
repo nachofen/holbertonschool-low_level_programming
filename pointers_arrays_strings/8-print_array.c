@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_array - a function that tells the length of a string
  * @a: the char pointer
@@ -7,20 +8,21 @@
 void print_array(int *a, int n)
 {
 	int aux = 0;
+
 	while (a[n] != '\0')
 	{
 		n++;
 	}
-	for (;aux < n; aux++)
+	for (; aux < n; aux++)
 	{
-		if(aux < n)
+		if (aux < n)
 		{
-			printf("%d, ", a[aux])
+			printf("%d, ", a[aux]);
 		}
 		else
 		{
-			printf("%d" , a[aux]);
+			printf("%d", a[aux]);
 		}
 	}
-	_putchar('\n');
+	printf("\n");
 }
