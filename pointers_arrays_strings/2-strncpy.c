@@ -9,7 +9,6 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int length = 0;
-	char *auxi = dest;
 
 	if (n > 0)
 	{
@@ -19,5 +18,5 @@ char *_strncpy(char *dest, char *src, int n)
 			length++;
 		}
 	}
-	return (auxi);
+	return (dest);
 }
