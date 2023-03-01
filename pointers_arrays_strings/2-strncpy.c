@@ -11,7 +11,7 @@ char *_strncpy(char *dest, char *src, int n)
 	int length = 0, l2 = 0;
 	char *auxi = dest;
 
-	if (n >= 0)
+	if (n > 0)
 	{
 		while (dest[l2] && n > 0)
 		{
