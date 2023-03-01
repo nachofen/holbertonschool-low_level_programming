@@ -8,17 +8,15 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int length = 0, l2 = 0;
+	int l2 = 0;
 	char *auxi = dest;
 
 	if (n > 0)
 	{
-		while (dest[l2] && n > 0)
+		while (dest[l2] && l2 < n)
 		{
 			dest[l2] = src[l2];
-			length++;
 			l2++;
-			n--;
 		}
 	}
 	return (auxi);
