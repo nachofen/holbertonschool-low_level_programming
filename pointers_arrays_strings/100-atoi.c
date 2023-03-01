@@ -13,7 +13,7 @@ int _atoi(char *s)
 
 	while (s[length])
 	{
-		if(s[length] == '-')
+		if (s[length] == '-')
 		{
 		negativo = negativo * -1;
 		}
