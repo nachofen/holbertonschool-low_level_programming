@@ -1,26 +1,14 @@
 #include "main.h"
 /**
- * print_array - a function that tells the length of a string
- * @a: the char pointer
- * @n: the int
+ * _puts - a function that tells the length of a string
+ * @str: the char pointer
  */
-void print_array(int *a, int n)
+void _puts(char *str)
 {
-	int aux = 0;
-	while (a[n] != '\0')
+	int cont = 0;
+	for (; cont < n; cont++)
 	{
-		n++;
-	}
-	for (;aux < n; aux++)
-	{
-		if(aux < n)
-		{
-			printf("%d, ", a[aux])
-		}
-		else
-		{
-			printf("%d" , a[aux]);
-		}
+		_putchar([cont]);
 	}
 	_putchar('\n');
 }
