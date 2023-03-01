@@ -8,11 +8,22 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int l2 = 0;
+	int l2 = 0, length = 0;
 	char *auxi = dest;
 
 	if (n > 0)
 	{
+		while(src[length])
+		{
+			length++;
+		}
+
+		length = length + 1;
+
+		if (n > length)
+		{
+			n = length;
+		}
 		while (dest[l2] && l2 < n)
 		{
 			dest[l2] = src[l2];
