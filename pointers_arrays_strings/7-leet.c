@@ -14,7 +14,8 @@ char *leet(char *string)
 	{
 		while (letras[contadordentro])
 		{
-			if (string[contadorfuera] == letras[contadordentro])
+			if (string[contadorfuera] == letras[contadordentro] || string[contadorfuera]
+			== letras[contadordentro] - 32) 
 			{
 				string[contadorfuera] = numeros[contadordentro];
 			}
