@@ -12,6 +12,10 @@ char *cap_string(char *string)
 	{
 		if (string[length] >= 'a' && string[length] <= 'z')
 		{
+			string[length] = string[length] - 32;
+		}
+		if (string[length] >= 'a' && string[length] <= 'z')
+		{
 			if (string[length - 1] == ',' || string[length - 1] == ';' ||
 			string[length - 1] == '!' || string[length - 1] == '.' || string[length - 1]
 			== '"' || string[length - 1] == ' ' || string[length - 1] == '\t' ||
