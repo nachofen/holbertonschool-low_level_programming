@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * cap_string - a function that print a string in reverse
- * @leet: the char pointer
+ * leet - a function that print a string in reverse
+ * @string: the char pointer
  * Return: a
  */
 char *leet(char *string)
@@ -15,7 +15,7 @@ char *leet(char *string)
 		while (letras[contadordentro])
 		{
 			if (string[contadorfuera] == letras[contadordentro] || string[contadorfuera]
-			== letras[contadordentro] - 32) 
+			== letras[contadordentro] - 32)
 			{
 				string[contadorfuera] = numeros[contadordentro];
 			}
