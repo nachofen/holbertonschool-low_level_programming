@@ -16,5 +16,5 @@ char *string_toupper(char *asterisco)
 		}
 		length++;
 	}
-	return(asterisco);
+	return (asterisco);
 }
