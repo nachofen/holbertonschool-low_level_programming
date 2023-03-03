@@ -13,7 +13,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	while (contador < n)
 	{
-		puntero[contador] = dest[contador];
+		dest[contador] = puntero[contador];
 		contador++;
 	}
 	return (dest);
