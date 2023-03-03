@@ -13,7 +13,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		while (accept[contador2])
 		{
-			if (s[contador] == accept[contador2])
+			if (s[contador] == accept[contador2] || s[contador] == accept[contador2] - 32)
 			{
 				encontre = 1;
 				break;
