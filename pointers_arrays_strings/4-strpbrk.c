@@ -15,6 +15,7 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[contador] == accept[contador2])
 			{
+				encontro = 1;
 				return (s + contador);		
 			}
 			contador2++;
