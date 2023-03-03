@@ -13,20 +13,13 @@ char *_strchr(char *s, char c)
 	{
 		if (s[contador] == c)
 		{
-			if (s[contador] == '\0')
-			{
-				return (s + 1);
-			}
-			else
-			{
-				return (s + contador);
-			}
+			return (s + contador);
 		}
 		contador++;
 	}
-	if (s[contador + 1] == c)
+	if (c == '\0')
 	{
-		return (s + 1);
+		return (s + contador);
 	}
 	return (0);
 }
