@@ -13,7 +13,15 @@ char *_strchr(char *s, char c)
 	{
 		if (s[contador] == c)
 		{
-			return (s + contador);
+			if (s[contador] == '\0')
+			{
+				s = 0;
+				return(s);
+			}
+			else
+			{
+				return (s + contador);
+			}
 			found++;
 		}
 		found++;
