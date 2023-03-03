@@ -13,8 +13,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		while (accept[contador2])
 		{
-			if (s[contador] == accept[contador2] || ((s[contador] >= 'A' &&
-			s[contador] <= 'Z') && s[contador] - 32 == accept[contador2]))
+			if (s[contador] == accept[contador2])
 			{
 				encontre = 1;
 				break;
@@ -28,6 +27,7 @@ unsigned int _strspn(char *s, char *accept)
 		contdif++;
 		contador2 = 0;
 		contador++;
+		encontre = 0;
 	}
 	return (contdif);
 }
