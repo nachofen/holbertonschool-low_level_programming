@@ -7,25 +7,21 @@
  */
 char *_strchr(char *s, char c)
 {
-	int contador1 = 0,contador2 = 0,found = 0;
-	char *puntero = s;
+	int contador = 0,found = 0;
 
-	while (s[contador1])
+	while (s[contador])
 	{
-		contador1++;
-	}
-	while (s[contador2])
-	{
-		if (s[contador2] == c)
+		if (s[contador] == c)
 		{
-			return (puntero + contador2);
+			return (s + contador);
 			found++;
 		}
 		found++;
-		contador2++;
+		contador++;
 	}
-	if (found <= contador1)
-	       return (puntero + 1);
-
-	return (0);
+	if (found <= contador)
+	{
+		return(s + 1);
+	}
+	return(0);
 }
