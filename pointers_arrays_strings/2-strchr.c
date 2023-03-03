@@ -25,7 +25,7 @@ char *_strchr(char *s, char c)
 		}
 		contador++;
 	}
-	if (contador == '\0')
+	if (c == '\0')
 	{
 		s = 0;
 		return (s);
