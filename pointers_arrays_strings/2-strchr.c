@@ -21,7 +21,8 @@ char *_strchr(char *s, char c)
 	}
 	if (found <= contador)
 	{
-		return(s + 1);
+		s = 0;
+		return(s);
 	}
 	return(0);
 }
