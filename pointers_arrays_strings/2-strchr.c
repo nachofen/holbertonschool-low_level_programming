@@ -7,7 +7,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	int contador = 0;
+	int contador = 0,found = 0;
 	char *puntero = s;
 
 	while (s[contador])
@@ -15,12 +15,13 @@ char *_strchr(char *s, char c)
 		if (s[contador] == c)
 		{
 			return (puntero);
+			found++;
 		}
-		else
-		{
-			return ("NULL");
-		}
+		found++;
 		contador++;
 	}
+	if (found <= contador)
+	       return ("NULL");
+
 	return (0);
 }
