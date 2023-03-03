@@ -7,23 +7,24 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int contador = 0, contador2 = 0, contdif = 0, contdiftotal = 0;
+	int contador = 0, contador2 = 0, contdif = 0;
 
 	while (s[contador])
 	{
 		while (accept[contador2])
 		{
-			if (s[contador] != accept[contador2])
+			if (s[contador] == accept[contador2])
+			{
+				break;
+			}
+			else
 			{
 				contdif++;
 			}
 			contador2++;
 		}
-		if (contdif == contador2)
-		{
-			contdiftotal++;
-		}
 		contador++;
+		contador2 = 0;
 	}
-	return (contdiftotal);
+	return (contdif);
 }
