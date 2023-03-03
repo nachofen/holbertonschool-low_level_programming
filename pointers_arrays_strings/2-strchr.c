@@ -15,8 +15,7 @@ char *_strchr(char *s, char c)
 		{
 			if (s[contador] == '\0')
 			{
-				s = 0;
-				return (s);
+				return (s + 1);
 			}
 			else
 			{
@@ -25,10 +24,9 @@ char *_strchr(char *s, char c)
 		}
 		contador++;
 	}
-	if (c == '\0')
+	if (s[contador + 1] == '\0')
 	{
-		s = 0;
-		return (s);
+		return (s + 1);
 	}
 	return (0);
 }
