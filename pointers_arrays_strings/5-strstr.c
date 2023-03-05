@@ -7,12 +7,16 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int contador = 0, contador2 = 0, contencontre = 0, letras = 0;
+	int contador = 0, contador2 = 0, contador3 = 0, contencontre = 0, letras = 0;
 	char *puntero;
 
 	while (needle[contador])
 	{
 		contador++;
+	}
+	while (haystack[contador3])
+	{
+		contador3++;
 	}
 	while (haystack[contador2])
 	{	
@@ -23,7 +27,7 @@ char *_strstr(char *haystack, char *needle)
 			
 			if (contador == letras)
 			{
-				puntero = &haystack[contador2 - letras];
+				puntero = &haystack[contador3 - letras];
 				return (puntero);
 			}
 		}
