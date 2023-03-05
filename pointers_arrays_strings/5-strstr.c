@@ -7,32 +7,28 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int contador = 0, contador2 = 0, contador3 = 0, contador4 = 0, letras = 0;
+	int contador = 0, contador2 = 0, contencontre = 0, letras = 0;
 	char *puntero;
 
-	while (needle[contador2])
+	while (needle[contador])
 	{
-		contador2++;
+		contador++;
 	}
-	while (haystack[contador4])
-	{
-		contador4++;
-	}
-	while (haystack[contador] && needle[contador3])
-	{
-		while (haystack[contador] == needle[contador3])
+	while (haystack[contador2])
+	{	
+		while (haystack[contador2] == needle[contencontre])
 		{
+			contencontre++;
 			letras++;
-			if (contador2 == letras)
+			
+			if (contador == letras)
 			{
-				puntero = &haystack[contador4 - letras];
+				puntero = &haystack[contador2 - letras];
 				return (puntero);
 			}
-			contador3++;
 		}
-		contador++;
 		contador2++;
-		contador3 = 0;
+		contencontre = 0;
 		letras = 0;
 	}
 	if (letras == 0)
