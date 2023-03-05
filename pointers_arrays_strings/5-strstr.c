@@ -27,7 +27,7 @@ char *_strstr(char *haystack, char *needle)
 			
 			if (contador == letras)
 			{
-				puntero = &haystack[contador3 - letras];
+				puntero = &haystack[contador2 - letras + 1];
 				return (puntero);
 			}
 		}
