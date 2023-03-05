@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * _strstr - a function that print a string in reverse
  * @haystack: the char pointer
@@ -34,5 +35,5 @@ char *_strstr(char *haystack, char *needle)
 		contencontre = 0;
 		letras = 0;
 	}
-		return (haystack + 1);
+		return (NULL);
 }
