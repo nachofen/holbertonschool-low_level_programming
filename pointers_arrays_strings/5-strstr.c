@@ -10,6 +10,10 @@ char *_strstr(char *haystack, char *needle)
 	int contador = 0, contador2 = 0, contencontre = 0, letras = 0;
 	char *puntero;
 
+	if (*needle == '\0')
+	{
+		return (haystack);
+	}
 	while (needle[contador])
 	{
 		contador++;
@@ -30,9 +34,5 @@ char *_strstr(char *haystack, char *needle)
 		contencontre = 0;
 		letras = 0;
 	}
-	if (letras == 0)
-	{
-		return (needle + 1);
-	}
-	return (0);
+		return (haystack + 1);
 }
