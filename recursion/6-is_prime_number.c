@@ -12,11 +12,11 @@ int is_prime_number(int n)
 
 	if (n <= 1)
 	{
-		return (0);	
+		return (0);
 	}
 	if (n <= 3)
 	{
-		return(1);
+		return (1);
 	}
 	return (_cousinfinder(n, div));
 }
@@ -37,5 +37,5 @@ int _cousinfinder(int num, int divisor)
 	{
 		return (0);
 	}
-	return (_cousinfinder(num ,divisor + 1));
+	return (_cousinfinder(num, divisor + 1));
 }
