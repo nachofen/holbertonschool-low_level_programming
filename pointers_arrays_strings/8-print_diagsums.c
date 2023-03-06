@@ -23,8 +23,8 @@ void print_diagsums(int *a, int size)
 	contcol = size - 1;
 	for (; contfil < size; contfil++)
 	{
-			sumadiag2 = sumadiag2 + a[contfil * size + contcol];
-			contcol--;
+		sumadiag2 = sumadiag2 + a[contfil * size + contcol];
+		contcol--;
 	}
-	printf("%d, %d,\n", sumadiag1, sumadiag2);
+	printf("%d, %d\n", sumadiag1, sumadiag2);
 }
