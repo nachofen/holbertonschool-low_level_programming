@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
 /**
  * _busquedaimplacable - a function that prints a string in reverse.
  * @test: An input int
- * @cuadrado:
+ * @cuadrado: asadsad
  * Return: Nothing
  */
 int _busquedaimplacable(int test, int cuadrado)
