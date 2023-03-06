@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _puts_recursion - a function that prints a string, followed by a new line.
+ * _strlen_recursion - a function that prints a string in reverse.
  * @s: An input string to printing
  * Return: Nothing
  */
 
-void _puts_recursion(char *s)
+int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 	{
