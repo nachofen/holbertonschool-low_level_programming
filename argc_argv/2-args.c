@@ -11,9 +11,10 @@ int main(int argc, char *argv[])
 
 	if (argc > 0)
 	{
-		for (; contador < argc; contador++)
+		while (contador < argc)
 		{
 			printf("%s\n", argv[contador]);
+			contador++;
 		}
 	}
 	return (0);
