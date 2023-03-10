@@ -10,13 +10,13 @@
  */
 int main(int argc, char *argv[])
 {
-	int resultado = 0, contador = 0;
+	int resultado = 0, contador = 0, contador2 = 0;
 
 	if (argc > 0)
 	{
 		while (argv[contador])
 		{
-			if (isdigit(argv[contador] != 0))
+			if (isdigit(argv[contador][contador2] != 0))
 			{
 				resultado = resultado + atoi(argv[contador]);
 			}
@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 			contador++;
+			contador2++;
 		}
 		printf("%d\n", resultado);
 	}
