@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	{
 		while (argv[contador])
 		{
-			if (isdigit(argv[contador][contador2] != 0))
+			if (isdigit(argv[contador][contador2] == 0))
 			{
 				resultado = resultado + atoi(argv[contador]);
 			}
