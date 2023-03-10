@@ -27,13 +27,13 @@ int main(int argc, char *argv[])
 			contador++;
 			contador2 = 0;
 		}
-		contador = 0 ;
+		contador = 1;
 		while (contador < argc)
 		{
 			num = atoi(argv[contador]);
 			resultado = resultado + num;
-			printf("%d\n", resultado);
 			contador++;
 		}
+		printf("%d\n", resultado);
 	return (0);
 }
