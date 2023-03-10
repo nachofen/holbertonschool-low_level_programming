@@ -10,23 +10,26 @@
  */
 int main(int argc, char *argv[])
 {
-	int resultado = 0, contador = 0, num = 0;
+	int resultado = 0, contador = 0, contador2 = 0, num = 0;
 
 	if (argc > 0)
 	{
-		while (argv[contador])
+		while (contador < argc)
 		{
-			num = atoi(argv[contador]);
-			if (isdigit(argv[contador][0]))
+			while (argv[contador][contador2])
 			{
-				resultado = resultado + num;
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+				if (isdigit(argv[contador][contador2]) == 0)
+					
+				{
+					printf("Error\n");
+					return (1);
+				}
+				contador2++;
+			}	
+			contador2 = 0;
 			contador++;
+			num = atoi(argv[contador]);
+			resultado = resultado + num;
 		}
 		printf("%d\n", resultado);
 	}
