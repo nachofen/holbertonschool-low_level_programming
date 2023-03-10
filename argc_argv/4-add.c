@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int resultado = 0, contador = 0, contador2 = 0, num = 0;
+	int resultado = 0, contador = 1, contador2 = 0, num = 0;
 
 	if (argc > 0)
 	{
