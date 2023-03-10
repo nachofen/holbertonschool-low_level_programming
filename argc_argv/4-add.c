@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 			}	
 			contador2 = 0;
 			contador++;
-			num = atoi(argv[contador]);
+			num = atoi(argv[contador] + contador2);
 			resultado = resultado + num;
 		}
 		printf("%d\n", resultado);
