@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
 			while (argv[contador][contador2])
 			{
 				if (isdigit(argv[contador][contador2]) == 0)
-					
 				{
 					printf("Error\n");
 					return (1);
