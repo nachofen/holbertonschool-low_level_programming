@@ -12,8 +12,6 @@ int main(int argc, char *argv[])
 {
 	int resultado = 0, contador = 1, contador2 = 0, num = 0;
 
-	if (argc > 0)
-	{
 		while (contador < argc)
 		{
 			while (argv[contador][contador2])
@@ -25,13 +23,17 @@ int main(int argc, char *argv[])
 					return (1);
 				}
 				contador2++;
-			}	
-			contador2 = 0;
+			}
 			contador++;
-			num = atoi(argv[contador] + contador2);
-			resultado = resultado + num;
+			contador2 = 0;
 		}
-		printf("%d\n", resultado);
-	}
+		contador = 0 ;
+		while (contador < argc)
+		{
+			num = atoi(argv[contador]);
+			resultado = resultado + num;
+			printf("%d\n", resultado);
+			contador++;
+		}
 	return (0);
 }
