@@ -48,15 +48,14 @@ char *_strdup(char *str)
 	char *pointer = malloc(sizeof(char) * (length + 1));
 	char *dupli;
 
-	if (dupli == NULL)
-	{
-		return (NULL);
-	}
 	if (!pointer)
 	{
 		exit(1);
 	}
 	dupli = _strcpy(pointer, str);
-
+	if (dupli == NULL)
+        {
+                return (NULL);
+        }
 	return (dupli);
 }
