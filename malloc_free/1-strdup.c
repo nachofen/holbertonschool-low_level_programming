@@ -49,14 +49,16 @@ int _strlen(char *s)
  */
 char *_strdup(char *str)
 {
-	int length = _strlen(str);
-	char *pointer = malloc(sizeof(char) * (length + 1));
+	int length = 0;
+	char *pointer;
 	char *dupli;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	length = _strlen(str);
+	pointer = malloc(sizeof(char) * (length + 1));
 	if (!pointer)
 	{
 		exit(1);
