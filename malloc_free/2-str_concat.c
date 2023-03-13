@@ -24,6 +24,7 @@ char *_strcat(char *dest, char *src)
 	}
 	return (auxi);
 }
+
 /**
  * _strlen - a function that tells the length of a string
  * @s: the char pointer
@@ -52,19 +53,19 @@ char *str_concat(char *s1, char *s2)
 {
 	int length = 0, length2 = 0;
 	char *pointer;
-	char *dupli;
 
-	if (str == NULL)
+	if (s1 == NULL && s2 == NULL)
 	{
-		str = '\0';
+		return (NULL);
 	}
 	length = _strlen(s1);
 	length2 = _strlen(s2);
-	pointer = malloc(sizeof(char) * (length + length2 + 2));
+	pointer = malloc(sizeof(char) * (length + length2 + 1));
 	if (!pointer)
 	{
 		exit(1);
 	}
-	pointer = _strconcat(s1,s2);
+	_strcat(pointer, s1);
+	_strcat(pointer, s2);
 	return (pointer);
 }
