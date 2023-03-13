@@ -11,6 +11,11 @@ char *_strcpy(char *dest, char *src)
 {
 	int length = 0;
 
+	if (src == NULL)
+	{
+		dest = '\0';
+		return (dest);
+	}
 	while (src[length])
 	{
 		dest[length] = src[length];
@@ -48,14 +53,14 @@ char *_strdup(char *str)
 	char *pointer = malloc(sizeof(char) * (length + 1));
 	char *dupli;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	if (!pointer)
 	{
 		exit(1);
 	}
 	dupli = _strcpy(pointer, str);
-	if (dupli == NULL)
-        {
-                return (NULL);
-        }
 	return (dupli);
 }
