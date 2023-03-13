@@ -45,7 +45,7 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	int length = _strlen(str);
-	char *pointer = malloc(sizeof(char) * (length - 1));
+	char *pointer = malloc(sizeof(char) * (length + 1));
 	char *dupli;
 
 	if (str == NULL)
