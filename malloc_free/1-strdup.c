@@ -48,7 +48,7 @@ char *_strdup(char *str)
 	char *pointer = malloc(sizeof(char) * (length + 1));
 	char *dupli;
 
-	if (str == NULL)
+	if (dupli == NULL)
 	{
 		return (NULL);
 	}
