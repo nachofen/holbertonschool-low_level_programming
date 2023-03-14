@@ -64,6 +64,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *pointer;
 	unsigned int s1_len = 0, s2_len = 0;
 
+	for (s1_len = 0; s1[s1_len]; s1_len++)
+	{}
+	for (s2_len = 0; s2[s2_len]; s2_len++)
+	{}
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -74,10 +78,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 		s2_len = 0;
 	}
-	for (s1_len = 0; s1[s1_len]; s1_len++)
-	{}
-	for (s2_len = 0; s2[s2_len]; s2_len++)
-	{}
 	if (n >= s2_len)
 	{
 		n = s2_len;
