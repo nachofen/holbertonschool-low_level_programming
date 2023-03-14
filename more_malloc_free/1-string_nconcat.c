@@ -34,6 +34,13 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+/**
+ ** string_nconcat - concatenate two strings up to n bytes.
+ ** @s1: source string
+ ** @s2: string to truncate up to n bytes
+ ** @n: number of bytes to truncate by
+ ** Return: pointer to new buffer
+ **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *pointer;
