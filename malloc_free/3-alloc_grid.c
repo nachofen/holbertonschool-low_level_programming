@@ -35,7 +35,7 @@ int **alloc_grid(int width, int height)
 				return (NULL);
 		}
 		nonull++;
-		for (; cont2 < height; cont2++)
+		for (cont2 = 0; cont2 < height; cont2++)
 		{
 			pointer[cont1][cont2] = 0;
 		}
