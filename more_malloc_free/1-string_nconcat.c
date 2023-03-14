@@ -80,7 +80,7 @@ char *_strcpy(char *dest, char *src)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *pointer;
-	unsigned int s1_len, s2_len;
+	unsigned int s1_len = 0, s2_len = 0;
 
 	if (s1 == NULL)
 	{
@@ -96,7 +96,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = s2_len;
 	}
-	pointer = malloc((s1_len) + n + 1);
+	pointer = malloc(s1_len + n + 1);
 	if (!pointer)
 	{
 		exit(1);
