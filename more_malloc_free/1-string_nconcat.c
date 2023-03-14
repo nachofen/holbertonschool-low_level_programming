@@ -2,28 +2,10 @@
 #include "main.h"
 
 /**
- ** _strlen - calculates the length of a string.
- ** @s: pointer to the character array.
- ** Return: length of the string
- **/
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-	while (*s != '\0')
-	{
-		i++;
-		s++;
-	}
-	return (i);
-}
-
-/**
- ** _strncat - a function that print a string in reverse
+ ** _strncat - a function that concatenates two strings 
  ** @dest: the char pointer
- ** @src: a
- ** @n : a
+ ** @src: the first string
+ ** @n : the size of second string to be added
  ** Return: a
  **/
 char *_strncat(char *dest, char *src, int n)
@@ -52,10 +34,10 @@ char *_strncat(char *dest, char *src, int n)
 	return (auxi);
 }
 /**
- ** _strcpy - a function that print a string in reverse
- ** @dest: the char pointer
- ** @src: a
- ** Return: a
+ ** _strcpy - a function that copy a string
+ ** @dest: the destiny pointer
+ ** @src: src pointer
+ ** Return: a pointer to copied string
  **/
 char *_strcpy(char *dest, char *src)
 {
@@ -71,9 +53,9 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * string_nconcat - a function that print a string in reverse
- * @s1: the char pointer
- * @s2: char pointer
+ * string_nconcat - a function that concatenates two strings
+ * @s1: first string
+ * @s2: second string
  * @n: bytes of s2 to be added to s1
  * Return: pointer to string
  */
@@ -90,8 +72,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	s1_len = _strlen(s1);
-	s2_len = _strlen(s2);
+	for (s1_len = 0; s1[s1_len]; s1_len++)
+	{}
+	for (s2_len = 0; s2[s2_len]; s2_len++)
+	{}
 	if (n >= s2_len)
 	{
 		n = s2_len;
