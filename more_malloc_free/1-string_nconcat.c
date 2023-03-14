@@ -67,10 +67,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL)
 	{
 		s1 = "";
+		s1_len = 0;
 	}
 	if (s2 == NULL)
 	{
 		s2 = "";
+		s2_len = 0;
 	}
 	for (s1_len = 0; s1[s1_len]; s1_len++)
 	{}
