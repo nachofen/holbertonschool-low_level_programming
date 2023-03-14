@@ -11,16 +11,24 @@
 int **alloc_grid(int width, int height)
 {
 	int **pointer;
+	int **auxpointer;
 	int cont1 = 0, cont2 = 0;
 
 	pointer = malloc(sizeof(int *) * width);
+	auxpointer = pointer;
 	if (!pointer)
 	{
 		exit(1);
 	}
 	for (; cont1 < width; cont1++)
 	{
-		pointer[cont1] = malloc(sizeof(int) * height);
+		auxpointer[cont1] = malloc(sizeof(int) * height);
+		if (auxpointer == NULL)
+		{
+			free(pointer);
+			return (NULL);
+		}
+
 		for (; cont2 < height; cont2++)
 		{
 			pointer[cont1][cont2] = 0;
