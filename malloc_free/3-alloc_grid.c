@@ -17,14 +17,14 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	pointer = (int**)malloc(width * sizeof(int *));
+	pointer = (int**)malloc(height * sizeof(int *));
 	if (!pointer)
 	{
 		return (NULL);
 	}
-	for (cont1 = 0; cont1 < width; cont1++)
+	for (cont1 = 0; cont1 < height; cont1++)
 	{
-		pointer[cont1] = (int *)malloc(height * (sizeof (int)));
+		pointer[cont1] = (int *)malloc(width * (sizeof (int)));
 		if (pointer[cont1] == NULL)
 		{
 			for (cont1 = 0; cont1 < nonull; cont1++)
@@ -35,7 +35,7 @@ int **alloc_grid(int width, int height)
 				return (NULL);
 		}
 		nonull++;
-		for (cont2 = 0; cont2 < height; cont2++)
+		for (cont2 = 0; cont2 < width; cont2++)
 		{
 			pointer[cont1][cont2] = 0;
 		}
