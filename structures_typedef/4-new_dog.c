@@ -56,6 +56,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (copyname == NULL)
 	{
 		free(copyname);
+		free(pdog);
 		return (NULL);
 	}
 	copyowner = malloc(contowner + 1);
