@@ -41,6 +41,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (pdog == NULL)
 	{
+		free(pdog);
 		return (NULL);
 	}
 	while (name[contname])
@@ -54,11 +55,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	copyname = malloc(contname + 1);
 	if (copyname == NULL)
 	{
+		free(copyname);
 		return (NULL);
 	}
 	copyowner = malloc(contowner + 1);
-	if (pdog == NULL)
+	if (copyowner == NULL)
 	{
+		free(copyowner);
 		return (NULL);
 	}
 	_strcpy(copyname, name);
