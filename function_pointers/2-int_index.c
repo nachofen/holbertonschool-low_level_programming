@@ -7,6 +7,7 @@
  * @array: name to print
  * @size: function to use
  * @cmp: s
+ * Return: asd
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -23,6 +24,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 			if (cmp(array[cont]) != 0)
 			{
 				return (cont);
+			}
+			else
+			{
+				return (-1);
 			}
 		}
 	}
