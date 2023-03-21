@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+* main - add function
+* @argc: num1
+* @argv: num2
+* Return: int
+*/
 int main(int argc, char *argv[])
 {
 	if (argc == 4)

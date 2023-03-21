@@ -2,6 +2,11 @@
 #include<string.h>
 #include <stdlib.h>
 #include "3-calc.h"
+/**
+* get_op_func - add function
+* @s: num1
+* Return: int
+*/
 int (*get_op_func(char *s))(int, int)
 {
 op_t ops[] = {
