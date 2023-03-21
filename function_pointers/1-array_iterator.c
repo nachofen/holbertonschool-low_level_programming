@@ -1,5 +1,6 @@
 #include "function_pointers.h"
 #include <stdlib.h>
+#include <stddef.h>
 
 /**
  * array_iterator - print the name
@@ -9,9 +10,9 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int cont = 0;
+	unsigned int cont = 0;
 
-	if (size != NULL && action != NULL)
+	if (size > 0 && action != NULL)
 	{
 		for (; cont < size; cont++)
 		action(array[cont]);
