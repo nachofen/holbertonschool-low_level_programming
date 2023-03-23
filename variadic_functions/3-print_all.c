@@ -14,7 +14,8 @@ void print_all(const char * const format, ...)
 	va_list anything;
 	const char *pformat = format;
 	char *auxs;
-	int auxi, auxf, auxc;
+	int auxi, auxc;
+	float auxf;
 
 	va_start(anything, format);
 	while (pformat[i] != '\0')
@@ -36,7 +37,7 @@ void print_all(const char * const format, ...)
 			case 'f':
 				auxf = va_arg(anything, int);
 
-				printf("%d, ", auxf);
+				printf("%f, ", auxf);
 				i++;
 				break;
 			case 's':
