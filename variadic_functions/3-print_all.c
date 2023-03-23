@@ -47,7 +47,7 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 					i++;
 				}
-				else
+				if (auxs != NULL)	
 				{
 					printf("%s", auxs);
 				}
