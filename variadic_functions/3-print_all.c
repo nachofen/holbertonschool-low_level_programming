@@ -14,7 +14,6 @@ void print_all(const char * const format, ...)
 	va_list anything;
 	const char *pformat = format;
 	char *auxs;
-	int auxi, auxc;
 
 	va_start(anything, format);
 	while (pformat[i] != '\0')
@@ -22,19 +21,14 @@ void print_all(const char * const format, ...)
 		switch (pformat[i])
 		{
 			case 'c':
-				auxc = va_arg(anything, int);
-
-				printf("%c, ", (int)auxc);
+				printf("%c, ", va_arg(anything, int));
 				i++;
 				break;
 			case 'i':
-				auxi = va_arg(anything, int);
-
-				printf("%d, ", auxi);
+				printf("%d, ", va_arg(anything, int));
 				i++;
 				break;
 			case 'f':
-
 				printf("%f, ", va_arg(anything, double));
 				i++;
 				break;
