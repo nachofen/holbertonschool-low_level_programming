@@ -49,8 +49,7 @@ void print_all(const char * const format, ...)
 
 				if(auxs == NULL)
 				{
-					auxs = "(nil)";
-					printf("%s", auxs);
+					auxs = "(nil)";				
 				}
 				printf("%s", auxs);
 				cont++;
