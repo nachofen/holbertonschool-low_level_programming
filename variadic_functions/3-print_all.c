@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 
-	while (cont < i)
+	while (cont < i && pformat != NULL)
 	{
 		if (found >= 1 && cont < i)
 		{
