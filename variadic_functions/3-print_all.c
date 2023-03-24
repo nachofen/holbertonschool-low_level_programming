@@ -48,8 +48,10 @@ void print_all(const char * const format, ...)
 				auxs = va_arg(anything, char *);
 
 				if(auxs == NULL)
-					printf("(nil)");
-				
+				{
+					auxs = "(nil)";
+					printf("%s", auxs);
+				}
 				printf("%s", auxs);
 				cont++;
 				found++;
