@@ -15,9 +15,6 @@ void print_all(const char * const format, ...)
 	const char *pformat = format;
 	char *auxs;
 
-	if (pformat == NULL)
-		return;
-
 	va_start(anything, format);
 	while (pformat[i] != '\0')
 	{
@@ -60,6 +57,6 @@ void print_all(const char * const format, ...)
 				break;
 		}
 	}
-	printf("\n");
 	va_end(anything);
+	printf("\n");
 }
