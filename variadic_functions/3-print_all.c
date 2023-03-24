@@ -15,6 +15,9 @@ void print_all(const char * const format, ...)
 	const char *pformat = format;
 	char *auxs;
 
+	if (pformat == NULL)
+		return;
+
 	va_start(anything, format);
 	while (pformat[i] != '\0')
 	{
@@ -46,11 +49,6 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':	
 				auxs = va_arg(anything, char *);
-
-				if(auxs == NULL)
-				{
-					auxs = "(nil)";				
-				}
 				printf("%s", auxs);
 				cont++;
 				found++;
