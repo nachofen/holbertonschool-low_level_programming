@@ -2,6 +2,29 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
+void printchar(va_list c)
+{
+	printf("%c", va_arg(c, int));
+}
+void printint(va_list i)
+{
+	printf("%d", va_arg(i, int));
+}
+void printfloat(va_list fl)
+{
+	printf("%f", va_arg(fl, double));
+}
+void printstr(va_list str)
+{
+	char *pointer = va_arg(str, char *);
+
+	if (pointer == NULL)
+	{
+		printf("(nil)");
+	}
+	printf("%s", pointer);
+}
+
 /**
  * print_all - functions that print anything
  * @format: the type of argument that will be passed
@@ -10,52 +33,31 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0, cont = 0, found = 0;
+	unsigned int i = 0, j = 0;
 	va_list anything;
-	const char *pformat = format;
-	char *auxs;
+	char *coma = "";
+	strvar struargs[] = {
+	{"c", printchar},
+	{"i", printint},
+	{"f", printfloat},
+	{"s", printstr}
+	};
 
 	va_start(anything, format);
-	while (pformat[i] != '\0')
+	while (format && format[i])
 	{
+		j = 0;
+		while (j < 4)
+		{
+		       if(format[i] == *struargs[j].letra)
+			{
+				printf("%s", coma);
+				struargs[j].f(anything);
+				coma = ", ";
+			}
+		       j++;
+		}
 		i++;
-	}
-
-	while (cont < i && pformat != NULL)
-	{
-		if (found >= 1 && cont < i)
-		{
-			printf(", ");
-		}
-		switch (pformat[cont])
-		{
-			case 'c':
-				printf("%c", va_arg(anything, int));
-				cont++;
-				found++;
-				break;
-			case 'i':
-				printf("%d", va_arg(anything, int));
-				cont++;
-				found++;
-				break;
-			case 'f':
-				printf("%f", va_arg(anything, double));
-				cont++;
-				found++;
-				break;
-			case 's':	
-				auxs = va_arg(anything, char *);
-				printf("%s", auxs);
-				cont++;
-				found++;
-				break;
-				
-				default:
-				cont++;
-				found = 0;
-				break;
-		}
 	}
 	va_end(anything);
 	printf("\n");
