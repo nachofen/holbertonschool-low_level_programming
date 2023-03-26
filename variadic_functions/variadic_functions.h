@@ -11,8 +11,14 @@ void printstr(va_list str);
 void printint(va_list i);
 void printfloat(va_list fl);
 
-
-typedef struct str{
+ /**
+ * str - Struct str
+ *
+ * @letra: The pointer to the char
+ * @f: The function associated
+ */
+typedef struct str
+{
 	char *letra;
 	void (*f)(va_list anything);
 } strvar;

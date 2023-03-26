@@ -1,26 +1,45 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "variadic_functions.h"
-
+/**
+ ** printchar - functions that print anything
+ ** @c: the type of argument that will be passed
+ ** Return: nothing
+ */
 void printchar(va_list c)
 {
 	printf("%c", va_arg(c, int));
 }
+/**
+ * printint - functions that print anything
+ * @i: the type of argument that will be passed
+ * Return: nothing
+ */
 void printint(va_list i)
 {
 	printf("%d", va_arg(i, int));
 }
+/**
+ * printfloat - functions that print anything
+ * @fl: the type of argument that will be passed
+ * Return: nothing
+ */
 void printfloat(va_list fl)
 {
 	printf("%f", va_arg(fl, double));
 }
+/**
+ * printstr - functions that print anything
+ * @str: the type of argument that will be passed
+ * Return: nothing
+ */
 void printstr(va_list str)
 {
 	char *pointer = va_arg(str, char *);
 
 	if (pointer == NULL)
 	{
-		printf("(nil)");
+		pointer = "(nil)";
 	}
 	printf("%s", pointer);
 }
@@ -49,13 +68,13 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-		       if(format[i] == *struargs[j].letra)
+			if (format[i] == *struargs[j].letra)
 			{
 				printf("%s", coma);
 				struargs[j].f(anything);
 				coma = ", ";
 			}
-		       j++;
+			j++;
 		}
 		i++;
 	}
