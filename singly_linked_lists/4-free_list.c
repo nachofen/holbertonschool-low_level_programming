@@ -3,10 +3,9 @@
 #include<string.h>
 #include "lists.h"
 /**
- * add_node_end - this function return the pointer to new node added at the
+ * free_list - this function return the pointer to new node added at the
  * end
  * @head: a pointer to head pointer
- * @str: the string to duplicate
  * Return: the number of nodes
  */
 void free_list(list_t *head)
@@ -16,7 +15,7 @@ void free_list(list_t *head)
 	while (temp != NULL)
 	{
 		temp = temp->next;
-		free (head->len);
+		free(head->str);
 		free(head);
 		head = temp;
 	}
