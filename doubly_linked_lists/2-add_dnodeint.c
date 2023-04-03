@@ -21,11 +21,13 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		free(tmp);
 		return (NULL);
 	}
+	else
+	{
 	
 	tmp->n = n;
 	tmp->prev = NULL;
 	tmp->next = *head;
 	*head = tmp;
-
+	}
 	return (*head);
 }
