@@ -13,7 +13,6 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *recorredor = *h;
-	dlistint_t *temp = NULL;
 	dlistint_t *nuevo = NULL;
 
 	nuevo = malloc(sizeof(dlistint_t));
@@ -39,7 +38,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (NULL);
 		}
 	}
-	nuevo->next = recorredor->next
+	nuevo->next = recorredor->next;
 	nuevo->prev = recorredor;
 	recorredor->next->prev = nuevo;
 	recorredor->next = nuevo;
