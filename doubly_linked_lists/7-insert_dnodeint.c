@@ -39,11 +39,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (NULL);
 		}
 	}
-	temp = recorredor->next;
-	recorredor->next = nuevo;
-	temp->prev = recorredor;
-	nuevo->next = temp;
+	nuevo->next = recorredor->next
 	nuevo->prev = recorredor;
+	recorredor->next->prev = nuevo;
+	recorredor->next = nuevo;
 
 	return (nuevo);
 }
