@@ -12,6 +12,7 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *recorredor = *head, *cleaner;
+	unsigned int contador = 0;
 
 
 	if (head == NULL || *head == NULL)
@@ -27,14 +28,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(recorredor);
 		return (1);
 	}
-	while (index != 1)
+	while (contador < index)
 	{
-		recorredor = recorredor->next;
-		index--;
 		if (recorredor->next == NULL)
 		{
 			return (-1);
 		}
+		recorredor = recorredor->next;
+		contador++;
 	}
 	recorredor->prev->next = recorredor->next;
 	if (recorredor->next != NULL)
