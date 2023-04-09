@@ -38,8 +38,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	recorredor->prev->next = recorredor->next;
 	if (recorredor->next != NULL)
-	recorredor->next->prev = recorredor->prev;
-	else
+		recorredor->next->prev = recorredor->prev;
+	if (recorredor->next == NULL)
 	{
 		cleaner = recorredor->prev;
 		cleaner->next = NULL;
