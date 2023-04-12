@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-	char buffer [1024];
+	char buffer[1024];
 	int open1, open2, read1, write1, close1;
 
 	if (ac != 3)
@@ -37,7 +37,7 @@ int main(int ac, char **av)
 			exit(99);
 		}
 	}
-	if(read1 == -1)
+	if (read1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
@@ -54,6 +54,6 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", open2);
 		exit(100);
 	}
-	return(0);	
+	return (0);
 }
 
