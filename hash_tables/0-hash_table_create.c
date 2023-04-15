@@ -6,6 +6,7 @@
  * @size: The size of the array
  * Each cell of this array is a pointer to the first node of a linked list,
  * because we want our HashTable to use a Chaining collision handling
+ * Return: pointer to the hashtable
  */
 
 hash_table_t *hash_table_create(unsigned long int size)
