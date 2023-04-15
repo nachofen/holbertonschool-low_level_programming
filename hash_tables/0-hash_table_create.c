@@ -2,7 +2,7 @@
 
 
 /**
- * hash_table_create - this function creates a hashtable 
+ * hash_table_create - this function creates a hashtable
  * @size: The size of the array
  * Each cell of this array is a pointer to the first node of a linked list,
  * because we want our HashTable to use a Chaining collision handling
@@ -21,7 +21,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 
 	table->size = size;
-	table->array = malloc(size * sizeof(hash_node_t));
+	table->array = malloc(size * sizeof(hash_node_t *));
 	if (table->array == NULL)
 	{
 		free(table);
